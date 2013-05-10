@@ -61,13 +61,14 @@ def main():
     tweet_file = open(sys.argv[2])
     sentiments = load_sentiment(sent_file)
     all_tweets = read_tweets(tweet_file)
+    
 
     for tweet in all_tweets:
         tw = split_tweet(tweet)
         tweet_mood_val = tweet_mood(tw, sentiments)
         for term in tw:
             if term not in sentiments.keys():
-                term_mood = tweet_mood_val / len(tw)
+                term_mood = tweet_mood_val 
                 sentiments[term] = term_mood
                 print term, term_mood
         
