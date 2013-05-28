@@ -24,7 +24,8 @@ def reducer(key, list_of_values):
     # value: list of occurrence counts
     doclist = []
     for v in list_of_values:
-      doclist.append(v)
+        if v not in doclist:
+          doclist.append(v)
     mr.emit((key, doclist))
 
 # Do not modify below this line
