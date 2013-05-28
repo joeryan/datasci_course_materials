@@ -23,7 +23,8 @@ def reducer(key, list_of_values):
     # value: list of list of fields
     total_rec = []
     for v in list_of_values:
-      total_rec.append(v)
+        for field in v:
+          total_rec.append(v)
     mr.emit((key, total_rec))
 
 # Do not modify below this line
