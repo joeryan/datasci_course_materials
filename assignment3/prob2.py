@@ -24,7 +24,7 @@ def reducer(key, list_of_values):
     total_rec = []
     for v in list_of_values:
       total_rec.append(v)
-    mr.emit((key, total))
+    mr.emit((key, total_rec))
 
 # Do not modify below this line
 # =============================
