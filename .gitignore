@@ -36,3 +36,6 @@ nosetests.xml
 
 # twitterstream app with personal secrets
 twitterstream.py[c]
+
+# output files from course assignments
+./output/*.*
